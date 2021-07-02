@@ -2,14 +2,14 @@
 $('document').ready(function () {
   $('#form').on('submit', function (event) {
     event.preventDefault();
-    // guardar parametro de busqueda & convertirlo a numero
+    // guardar parámetro de búsqueda y convertirlo a número
     let searchQuery = parseInt($('#searchInpt').val());
 
-    // Si el parametro es "falso" (en js existen los valores "falsey") &&
+    // Si el parámetro es "falso" (en js existen los valores "falsey") &&
     // si la cadena es vacía, se envía alert para pedir valor numérico
     // caso contrario, se ejecuta la lógica
     if (searchQuery && searchQuery !== '') {
-      // preparar objeto con parametros de la función
+      // preparar objeto con parámetros de la función
       let requestData = {
         url:
           'https://www.superheroapi.com/api.php/10222117104690713/' +
@@ -17,8 +17,8 @@ $('document').ready(function () {
         contentType: 'application/json; charset=utf-8',
       };
 
-      // Llamada a función de Ajax (se usa when porque usé la función fuera y la llamo
-      // , lo que devuelve una "promesa"... when solo se ejecuta cuando esa promesa esta finalizada)
+      // Llamada a función de Ajax (se usa when porque se usó la función fuera y la llamo
+      // , lo que devuelve una "promesa"... when solo se ejecuta cuando esa promesa está finalizada)
       $.when(getAjaxData(requestData)).then((data) => {
         console.log(data);
 
@@ -34,13 +34,13 @@ $('document').ready(function () {
         // mostrar tabla solo cuando se obtienen resultados modificando CSS
         $('#hero-details').css('display', 'block');
 
-        // GRAFICO
+        // GRÁFICO
         // guardar data.powerstats en una variable para reducir la
         // cantidad de escritura posterior
         let powerstats = data.powerstats;
         // console.log(powerstats);
 
-        // Creación de objeto CanvasJs pasando los parametros
+        // Creación de objeto CanvasJs pasando los parámetros
         // como indica la documentación
         var chart = new CanvasJS.Chart('chartContainer', {
           animationEnabled: true,
