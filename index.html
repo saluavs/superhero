@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperHero</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      #hero-img {
+        max-width: 100%;
+        height: auto;
+      }
+      #hero-details {
+        display: none;
+      }
+      #nav-img {
+        height: 3rem;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/img/sh2.jpg" alt="logo" id="nav-img"/>
+        <img class="mx-2" src="img/favicon.ico" alt="" />SuperHero</span>
+      </a>
+    </nav>
+    <!-- header imagen 2 -->
+    <header>
+      <img src="./assets/img/sh1.jpg" alt="" class="Imagen_header w-50 rounded mx-auto d-block">
+    </header>
+
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col col-md-5 d-flex justify-content-center">
+          <!-- input -->
+          <form id="form">
+            <h2>Encuentra tu SuperHero</h2>
+            <label for="nombre">Ingresa el número del SuperHero a buscar</label>
+            <input type="text" name="" id="searchInpt" />
+            <button type="submit" class="btn btn-primary ">
+              Buscar
+            </button>
+          </form>
+          <!-- /END input -->
+        </div>
+      </div>
+      <!-- print heroes -->
+      <div class="row">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-4">
+              <img src="" id="hero-img" />
+            </div>
+            <div class="col-8" id="hero-details">
+              <!-- hero name -->
+              <h4>Nombre: <span id="hero-name"></span></h4>
+              <!-- hero connections -->
+              <span
+                ><em>Conexiones:</em>
+                <span id="hero-connections"></span>
+              </span>
+              <hr />
+              <!-- hero occupation -->
+              <span
+                ><em>Ocupación:</em>
+                <span id="hero-occupation"></span>
+              </span>
+              <hr />
+              <!-- primera aparición -->
+              <span
+                ><em>Primera Aparición:</em>
+                <span id="hero-fAppearance"></span>
+              </span>
+              <hr />
+              <!-- altura -->
+              <span
+                ><em>Altura:</em>
+                <span id="hero-height"></span>
+              </span>
+              <hr />
+              <!-- peso -->
+              <span
+                ><em>Peso:</em>
+                <span id="hero-weight"></span>
+              </span>
+              <hr />
+              <!-- peso -->
+
+              <span
+                ><em>Sobrenombres:</em>
+                <span id="hero-aliases"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <!-- grafico habilidades -->
+          <div id="chartContainer" style="height: 300px; width: 100%"></div>
+          <!-- /END grafico habilidades -->
+        </div>
+      </div>
+    </div>
+    <!-- bootstrap JS -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
